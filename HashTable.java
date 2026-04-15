@@ -86,5 +86,20 @@ public class HashTable {
 		}
 		return 3;
 	}
-
+	Bucket get(String key) {
+			int currentIndex = getIndex(key);
+			int startIndex = currentIndex;
+			
+			while(hashtable[currentIndex] !=null) {
+				if (hashtable[currentIndex].key.equals(key)) {
+					return hashtable[currentIndex];
+				}
+				currentIndex = (currentIndex + 1) % capacity;
+				
+				if (currentIndex == startIndex) 
+					break;
+			}
+			
+			return null;
+		}
 }
