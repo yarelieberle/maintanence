@@ -6,7 +6,7 @@ public class Bucket {
 	int ticket;
 	boolean status;
 	
-	Bucket(String key, Object value){
+	Bucket(String key, Object value, boolean status){
 		this.key = key;
 		this.value = value;
 		this.status = false;
