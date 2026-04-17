@@ -60,17 +60,16 @@ public class Main {
 				}
 
 			} 
-			else if (mode == 2) { //MAITANENCE VIEW
+			else if (mode == 2) { //MAINTENANCE VIEW
 				while (true && end == false) {
-					System.out.println("\nEnter maitanence password (enter 3 to return to main menu): ");
+					System.out.println("\nEnter maintenance password (enter 3 to return to main menu): ");
 					int pass = sc.nextInt();
 
 					// password is just 123, this exists as a hypothetical security check.
 
-					if (pass == 3) {
 						break; // in case of misinput, allows to go back to pick student view.
 					} else if (pass == 123) {
-						System.out.println("Maitanence View: View & Edit active support tickets.");
+						System.out.println("Maintenance View: View & Edit active support tickets.");
 						System.out.println("------------(Enter 3 to close program)------------");
 
 						while (true) {
@@ -98,7 +97,7 @@ public class Main {
 										boolean Status = true;
 										System.out.println("What is the final result?"); //different language for clarity to maintenance staff
 										String Progress = sc.next();
-										//HashTable.editRequest(ID, Status ,Progress); 
+										HashTable.editRequest(ID, Status ,Progress); 
 									}
 									if(mode != 1) {
 										boolean Status = false;
@@ -108,7 +107,7 @@ public class Main {
 									}
 								}
 							} //doesn't read if mode != 2, returns to menu if its anything but 1.
-							System.out.println("Request not found or denied, returning to list of requests..\n");
+							System.out.println("Request not found or denied, returning to list of requests.\n");
 						}
 					}
 
