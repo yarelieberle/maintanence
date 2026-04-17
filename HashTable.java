@@ -86,6 +86,7 @@ public class HashTable {
 		}
 		return 3;
 	}
+	
 	Bucket get(String key) {
 			int currentIndex = getIndex(key);
 			int startIndex = currentIndex;
@@ -102,4 +103,7 @@ public class HashTable {
 			
 			return null;
 		}
+	
+	public void editRequest(int ID, String Status ,String Progress) {
+		
 }
